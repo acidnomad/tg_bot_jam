@@ -1,8 +1,12 @@
+import os
 from aiogram import Bot, Dispatcher, types
 import asyncio
 from aiogram.filters import CommandStart
+from dotenv import find_dotenv, load_dotenv
 
-bot = Bot(token='7216149566:AAGw9g6ZLWlKuHPba47UODBMcTgfSqacW50')
+load_dotenv(find_dotenv())
+
+bot = Bot(token=os.getenv('TOKEN'))
 dp = Dispatcher()
 
 
